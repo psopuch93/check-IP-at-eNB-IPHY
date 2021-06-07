@@ -2,24 +2,22 @@
 ENB_N="192.168.255.129"
 ENB_NB="192.168.255.1"
 IPHY="192.168.200.1"
-function Checkenb() {
-if ping -c 5 $ENB_N &> /dev/null; then
-	echo "eNB works for IP: $ENB_N"
+function Checkmodules() {
+if ping -c 5 $1 &> /dev/null; then
+	echo "eNB works for IP: $1"
 else
-	if ping -c 5 $ENB_NB &> /dev/null; then
-		echo "eNB works for IP: $ENB_NB"
+	if ping -c 5 $2 &> /dev/null; then
+		echo "eNB works for IP: $2"
 	else
-		echo "eNB doesnt works for IP's: $ENB_N and $ENB_NB"
+		echo "eNB doesnt works for IP's: $1 and $2"
 	fi
 fi
-}
-function Checkiphy() {
-if ping -c 5 $IPHY &> /dev/null; then
-        echo "IPHY works for IP: $IPHY"
+if ping -c 5 $3 &> /dev/null; then
+        echo "IPHY works for IP: $3"
 else
-        echo "IPHY doesnt works for IP: $IPHY"
+        echo "IPHY doesnt works for IP: $3"
 fi
 }
+Checkmodules $ENB_N $ENB_NB $IPHY
 
-Checkenb
-Checkiphy
+
