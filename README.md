@@ -2,7 +2,7 @@
 
 <h1>For what?</h1>
 
-  Bash script that helps me automate my work. I'm working with some devices with specify IP, manual pinging is boring so I wrote this script.
+  Bash script that helps me automate my job. I'm working with some devices with specify IP, manual pinging is boring so I wrote this script.
 
 <h1>How to use</h1>
 
