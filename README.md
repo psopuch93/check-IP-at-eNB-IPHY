@@ -9,6 +9,18 @@
   Just copy script in your Linux machine and type:
 
 ``` bash modules.sh ```
+
+  Add some alias:
+  
+``` vim ~/.bashrc ```
+
+```  alias modules=”bash modules.sh"  ```
+
+Save the file. The file will be automatically loaded in your next session. If you want to use the newly defined alias in the current session, issue the following command:
+
+``` source ~/.bashrc ```
+
+
   
 <h1>Tests</h1>
   
